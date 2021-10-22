@@ -1,0 +1,20 @@
+{
+  "name": "authservertemplate",
+  "version": "1.0.0",
+  "description": "A template for server side authentication with JWT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Preston Harrison",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

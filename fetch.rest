@@ -1,0 +1,34 @@
+POST http://localhost:8080/token/create
+Content-Type: application/json
+
+{
+    "email": "example@example.com",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:8080/token/login
+Content-Type: application/json
+
+{
+    "email": "example@example.com",
+    "password": "password"
+}
+
+###
+
+GET http://localhost:8080/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzQ5MDQ2NTYsImV4cCI6MTYzNDkwNDY3MX0.WTMQt7Fh4x4R68K5O9EQw5-_Ba1qemkk9o8jorExhZcs
+
+###
+GET http://localhost:8080/token/refresh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzQ5MDQ2MjN9.rx3HE_B-sGfXvO9t3h63asdEoiWveH9NDxxHJrr71Nk
+
+###
+DELETE http://localhost:8080/token/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzQ5MDcyODN9.XbFy0m8zTG1n9Fa70VaGdexa7InRKNop4l_HWQ7a6Tw"
+}
