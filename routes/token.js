@@ -251,7 +251,8 @@ tokenRouter.post('/login', async (req, res) => {
 
   // Ensures that the password given is the same as the hashed
   // password stored in the database
-  if (!bcrypt.compare(password, user.password)) {
+  const authenticated = await bcrypt.compare(password, user.password)
+  if (!authenticated) {
     return res.status(401).json({ msg: INVALID_PASSWORD })
   }
 
