@@ -1,7 +1,4 @@
 /*
-  NOTE: I know JWT token doesn't make sense since "JWT token" means JSON
-  web token token, but it reads better. 
-  
   This module exports the token router (tokenRouter) and authentication
   middleware (authenticateToken).
 
